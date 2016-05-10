@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_settings">Paramètres</string>
+    <string name="connection">Connexion</string>
+    <string name="password">Mot de passe</string>
+    <string name="register">Enregistrement</string>
+    <string name="my_account">Mon compte</string>
+    <string name="Deconnection">Déconnexion</string>
+</resources>

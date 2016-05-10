@@ -1,0 +1,5 @@
+CHANGED,D:\AndroidStudioProjects\devAnd\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\dev\alt\devand\MyActivity$ConnectUser$1$override.class
+CHANGED,D:\AndroidStudioProjects\devAnd\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\dev\alt\devand\MyActivity$1$override.class
+CHANGED,D:\AndroidStudioProjects\devAnd\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\dev\alt\devand\MyActivity$override.class
+CHANGED,D:\AndroidStudioProjects\devAnd\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class
+CHANGED,D:\AndroidStudioProjects\devAnd\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\dev\alt\devand\MyActivity$ConnectUser$override.class
