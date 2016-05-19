@@ -11,6 +11,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
+
+import java.io.UnsupportedEncodingException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
@@ -30,6 +35,7 @@ public class MyActivity extends AppCompatActivity {
 
     private static final String TAG_SUCCESS = "success";
     private static final String TAG_MAIL = "mail";
+    private static final String SALAGE = "alt";
 
     // Creating JSON Parser object
     JSONParser jParser = new JSONParser();
@@ -38,12 +44,22 @@ public class MyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         
         setContentView(R.layout.login);
+
         Button login = (Button) findViewById(R.id.tryLogin);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ConnectUser cu = new ConnectUser(((EditText) findViewById(R.id.login)).getText().toString(), ((EditText) findViewById(R.id.password)).getText().toString());
                 cu.execute();
+            }
+        });
+
+        TextView registration = (TextView) findViewById(R.id.Registration);
+        registration.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MyActivity.this, Registration.class);
+                startActivity(i);
             }
         });
     }
@@ -99,14 +115,12 @@ public class MyActivity extends AppCompatActivity {
             // Building Parameters
             List<NameValuePair> params = new ArrayList<NameValuePair>();
             params.add(new BasicNameValuePair("login", login));
-            params.add(new BasicNameValuePair("pass", password));
+            params.add(new BasicNameValuePair("pass", get_SHA_512_SecurePassword(password)));
 
             // getting JSON string from URL
             JSONObject json = jParser.makeHttpRequest(url_connection, "POST", params);
 
             // Check your log cat for JSON response
-            Log.d("resultat: ", json.toString());
-
             try {
                 // Checking for SUCCESS TAG
                 int success = json.getInt(TAG_SUCCESS);
@@ -139,10 +153,29 @@ public class MyActivity extends AppCompatActivity {
             // updating UI from Background Thread
             runOnUiThread(new Runnable() {
                 public void run() {
-
                 }
             });
+        }
 
+        public String get_SHA_512_SecurePassword(String passwordToHash){
+            String generatedPassword = null;
+            try {
+                MessageDigest md = MessageDigest.getInstance("SHA-512");
+                md.update(SALAGE.getBytes("UTF-8"));
+                byte[] bytes = md.digest(passwordToHash.getBytes("UTF-8"));
+                StringBuilder sb = new StringBuilder();
+                for(int i=0; i< bytes.length ;i++){
+                    sb.append(Integer.toString((bytes[i] & 0xff) + 0x100, 16).substring(1));
+                }
+                generatedPassword = sb.toString();
+            }
+            catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
+            catch (NoSuchAlgorithmException e){
+                e.printStackTrace();
+            }
+            return generatedPassword;
         }
     }
 }

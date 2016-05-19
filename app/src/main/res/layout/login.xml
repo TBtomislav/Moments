@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MyActivity">
+    tools:context=".MyActivity"
+    android:focusableInTouchMode="true">
 
     <include layout="@layout/background"/>
 
@@ -42,7 +43,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/password"
         android:editable="false"
-        android:inputType="text"
+        android:inputType="textPassword"
         android:minWidth="300dp"
         android:minHeight="40dp"
         android:hint="@string/password"
@@ -94,10 +95,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/register"
-        android:id="@+id/textView3"
+        android:id="@+id/Registration"
         android:layout_below="@+id/textView2"
         android:layout_centerHorizontal="true"
         android:textColor="#375D81"
         android:layout_marginTop="10dp"
-        android:textSize="35sp" />
+        android:textSize="35sp"
+        android:onClick="onClick"
+        android:clickable="true"/>
 </RelativeLayout>

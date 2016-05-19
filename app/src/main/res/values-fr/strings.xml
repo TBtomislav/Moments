@@ -6,4 +6,8 @@
     <string name="register">Enregistrement</string>
     <string name="my_account">Mon compte</string>
     <string name="Deconnection">Déconnexion</string>
+    <string name="ConfirmPassword">Confirmer</string>
+    <string name="but_cancel">Annuler</string>
+    <string name="login">Identifiant</string>
+    <string name="mail">Mail</string>
 </resources>

@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\AndroidStudioProjects\devAnd\app\src\main\AndroidManifest.xml:2:1-30:12
+ADDED from D:\AndroidStudioProjects\devAnd\app\src\main\AndroidManifest.xml:2:1-31:12
 	package
 		ADDED from D:\AndroidStudioProjects\devAnd\app\src\main\AndroidManifest.xml:3:5-33
 		INJECTED from D:\AndroidStudioProjects\devAnd\app\src\main\AndroidManifest.xml
@@ -14,7 +14,7 @@ ADDED from D:\AndroidStudioProjects\devAnd\app\src\main\AndroidManifest.xml:2:1-
 		INJECTED from D:\AndroidStudioProjects\devAnd\app\src\main\AndroidManifest.xml
 		INJECTED from D:\AndroidStudioProjects\devAnd\app\src\main\AndroidManifest.xml
 application
-ADDED from D:\AndroidStudioProjects\devAnd\app\src\main\AndroidManifest.xml:5:5-26:19
+ADDED from D:\AndroidStudioProjects\devAnd\app\src\main\AndroidManifest.xml:5:5-27:19
 MERGED from [com.android.support:appcompat-v7:23.2.0] D:\AndroidStudioProjects\devAnd\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.0\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-v4:23.2.0] D:\AndroidStudioProjects\devAnd\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:animated-vector-drawable:23.2.0] D:\AndroidStudioProjects\devAnd\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.0\AndroidManifest.xml:7:5-20
@@ -64,10 +64,14 @@ activity#com.dev.alt.devand.Connected
 ADDED from D:\AndroidStudioProjects\devAnd\app\src\main\AndroidManifest.xml:23:9-47
 	android:name
 		ADDED from D:\AndroidStudioProjects\devAnd\app\src\main\AndroidManifest.xml:23:19-44
-uses-permission#android.permission.INTERNET
-ADDED from D:\AndroidStudioProjects\devAnd\app\src\main\AndroidManifest.xml:29:5-67
+activity#com.dev.alt.devand.Registration
+ADDED from D:\AndroidStudioProjects\devAnd\app\src\main\AndroidManifest.xml:24:9-50
 	android:name
-		ADDED from D:\AndroidStudioProjects\devAnd\app\src\main\AndroidManifest.xml:29:22-64
+		ADDED from D:\AndroidStudioProjects\devAnd\app\src\main\AndroidManifest.xml:24:19-47
+uses-permission#android.permission.INTERNET
+ADDED from D:\AndroidStudioProjects\devAnd\app\src\main\AndroidManifest.xml:30:5-67
+	android:name
+		ADDED from D:\AndroidStudioProjects\devAnd\app\src\main\AndroidManifest.xml:30:22-64
 uses-sdk
 INJECTED from D:\AndroidStudioProjects\devAnd\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.2.0] D:\AndroidStudioProjects\devAnd\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.0\AndroidManifest.xml:21:5-23:78
