@@ -4,7 +4,7 @@
     api-level="16"
     density="mdpi"
     format="7"
-    timestamp="15158636260921" >
+    timestamp="5785639409992" >
 
     <task
         name="javac"
@@ -19,14 +19,10 @@
         name="verifier"
         duration="0" />
 
-    <artifact
-        location="D:\AndroidStudioProjects\devAnd\app\build\outputs\apk\app-debug.apk"
-        type="MAIN" />
-
-    <build timestamp="15158636260921" >
+    <build timestamp="8824609221581" >
         <artifact
-            location="D:\AndroidStudioProjects\devAnd\app\build\outputs\apk\app-debug.apk"
-            type="MAIN" />
+            location="D:\AndroidStudioProjects\devAnd\app\build\intermediates\res\resources-debug.ap_"
+            type="RESOURCES" />
     </build>
 
 </instant-run>

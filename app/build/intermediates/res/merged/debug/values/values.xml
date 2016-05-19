@@ -237,6 +237,7 @@
     <dimen name="notification_large_icon_height">64dp</dimen>
     <dimen name="notification_large_icon_width">64dp</dimen>
     <dimen name="notification_subtext_size">12dp</dimen>
+    <dimen name="padd_top">30dp</dimen>
     <drawable name="notification_template_icon_bg">#3333B5E5</drawable>
     <item name="action_bar_activity_content" type="id"/>
     <item name="action_bar_spinner" type="id"/>
@@ -256,6 +257,7 @@
     <integer name="cancel_button_image_alpha">127</integer>
     <integer name="design_snackbar_text_max_lines">2</integer>
     <integer name="status_bar_notification_info_maxnum">999</integer>
+    <string name="ConfirmPassword">Confirm Password</string>
     <string name="Deconnection">Deconnection</string>
     <string name="abc_action_bar_home_description">Navigate home</string>
     <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
@@ -280,10 +282,12 @@
     <string name="app_name" translatable="false">Moments</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
+    <string name="but_cancel">Cancel</string>
     <string name="but_ok" translatable="false">OK</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string name="connection">Connection</string>
-    <string name="login" translatable="false">Login</string>
+    <string name="login">Login</string>
+    <string name="mail">E-mail</string>
     <string name="my_account">My account</string>
     <string name="password">Password</string>
     <string name="register">Register</string>

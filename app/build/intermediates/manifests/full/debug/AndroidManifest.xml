@@ -30,6 +30,7 @@
             </intent-filter>
         </activity>
         <activity android:name="com.dev.alt.devand.Connected" />
+        <activity android:name="com.dev.alt.devand.Registration" />
 
         <!-- bdd -->
     </application>

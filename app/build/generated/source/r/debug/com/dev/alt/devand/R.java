@@ -2189,6 +2189,7 @@ containing a value of this type.
         public static final int notification_large_icon_height=0x7f080068;
         public static final int notification_large_icon_width=0x7f080069;
         public static final int notification_subtext_size=0x7f08006a;
+        public static final int padd_top=0x7f08006b;
     }
     public static final class drawable {
         public static final int abc_ab_share_pack_mtrl_alpha=0x7f020000;
@@ -2275,6 +2276,8 @@ containing a value of this type.
         public static final int rounded_edit_text=0x7f020050;
     }
     public static final class id {
+        public static final int ConfirmPassword=0x7f0c008c;
+        public static final int Registration=0x7f0c007b;
         public static final int action0=0x7f0c007c;
         public static final int action_bar=0x7f0c005a;
         public static final int action_bar_activity_content=0x7f0c0000;
@@ -2290,12 +2293,13 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f0c0057;
         public static final int action_mode_bar_stub=0x7f0c0056;
         public static final int action_mode_close_button=0x7f0c003c;
-        public static final int action_settings=0x7f0c0089;
+        public static final int action_settings=0x7f0c0091;
         public static final int activity_chooser_view_content=0x7f0c003d;
         public static final int alertTitle=0x7f0c0049;
         public static final int always=0x7f0c0033;
         public static final int beginning=0x7f0c0031;
         public static final int bottom=0x7f0c001d;
+        public static final int butCancel=0x7f0c0090;
         public static final int buttonPanel=0x7f0c0044;
         public static final int cancel_action=0x7f0c007d;
         public static final int center=0x7f0c001e;
@@ -2346,6 +2350,7 @@ containing a value of this type.
         public static final int listMode=0x7f0c000b;
         public static final int list_item=0x7f0c0041;
         public static final int login=0x7f0c0077;
+        public static final int mail=0x7f0c008e;
         public static final int media_actions=0x7f0c007f;
         public static final int middle=0x7f0c0032;
         public static final int mini=0x7f0c0030;
@@ -2398,16 +2403,20 @@ containing a value of this type.
         public static final int tabMode=0x7f0c000d;
         public static final int text=0x7f0c0086;
         public static final int text2=0x7f0c0084;
+        public static final int textEmail=0x7f0c008d;
         public static final int textSpacerNoButtons=0x7f0c004d;
         public static final int textView=0x7f0c0075;
         public static final int textView2=0x7f0c007a;
-        public static final int textView3=0x7f0c007b;
+        public static final int textViewConfirmPassword=0x7f0c008b;
+        public static final int textViewLogin=0x7f0c0089;
+        public static final int textViewPassword=0x7f0c008a;
         public static final int time=0x7f0c0082;
         public static final int title=0x7f0c0043;
         public static final int title_template=0x7f0c0048;
         public static final int top=0x7f0c0026;
         public static final int topPanel=0x7f0c0047;
         public static final int tryLogin=0x7f0c0079;
+        public static final int tryRegister=0x7f0c008f;
         public static final int up=0x7f0c0009;
         public static final int useLogo=0x7f0c0014;
         public static final int view_offset_helper=0x7f0c000a;
@@ -2472,10 +2481,11 @@ containing a value of this type.
         public static final int notification_template_media=0x7f04002d;
         public static final int notification_template_part_chronometer=0x7f04002e;
         public static final int notification_template_part_time=0x7f04002f;
-        public static final int select_dialog_item_material=0x7f040030;
-        public static final int select_dialog_multichoice_material=0x7f040031;
-        public static final int select_dialog_singlechoice_material=0x7f040032;
-        public static final int support_simple_spinner_dropdown_item=0x7f040033;
+        public static final int registration=0x7f040030;
+        public static final int select_dialog_item_material=0x7f040031;
+        public static final int select_dialog_multichoice_material=0x7f040032;
+        public static final int select_dialog_singlechoice_material=0x7f040033;
+        public static final int support_simple_spinner_dropdown_item=0x7f040034;
     }
     public static final class menu {
         public static final int menu_my=0x7f0d0000;
@@ -2484,7 +2494,8 @@ containing a value of this type.
         public static final int ic_launcher=0x7f030000;
     }
     public static final class string {
-        public static final int Deconnection=0x7f060014;
+        public static final int ConfirmPassword=0x7f060014;
+        public static final int Deconnection=0x7f060015;
         public static final int abc_action_bar_home_description=0x7f060000;
         public static final int abc_action_bar_home_description_format=0x7f060001;
         public static final int abc_action_bar_home_subtitle_description_format=0x7f060002;
@@ -2504,17 +2515,19 @@ containing a value of this type.
         public static final int abc_shareactionprovider_share_with=0x7f060010;
         public static final int abc_shareactionprovider_share_with_application=0x7f060011;
         public static final int abc_toolbar_collapse_description=0x7f060012;
-        public static final int action_settings=0x7f060015;
-        public static final int app_name=0x7f06001a;
-        public static final int appbar_scrolling_view_behavior=0x7f06001b;
-        public static final int bottom_sheet_behavior=0x7f06001c;
-        public static final int but_ok=0x7f06001d;
-        public static final int character_counter_pattern=0x7f06001e;
-        public static final int connection=0x7f060016;
-        public static final int login=0x7f06001f;
-        public static final int my_account=0x7f060017;
-        public static final int password=0x7f060018;
-        public static final int register=0x7f060019;
+        public static final int action_settings=0x7f060016;
+        public static final int app_name=0x7f06001e;
+        public static final int appbar_scrolling_view_behavior=0x7f06001f;
+        public static final int bottom_sheet_behavior=0x7f060020;
+        public static final int but_cancel=0x7f060017;
+        public static final int but_ok=0x7f060021;
+        public static final int character_counter_pattern=0x7f060022;
+        public static final int connection=0x7f060018;
+        public static final int login=0x7f060019;
+        public static final int mail=0x7f06001a;
+        public static final int my_account=0x7f06001b;
+        public static final int password=0x7f06001c;
+        public static final int register=0x7f06001d;
         public static final int status_bar_notification_info_overflow=0x7f060013;
     }
     public static final class style {

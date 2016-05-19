@@ -64,6 +64,10 @@
         "source": "D:\\AndroidStudioProjects\\devAnd\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\layout\\abc_list_menu_item_icon.xml"
     },
     {
+        "merged": "D:\\AndroidStudioProjects\\devAnd\\app\\build\\intermediates\\res\\merged\\debug\\layout\\registration.xml",
+        "source": "D:\\AndroidStudioProjects\\devAnd\\app\\src\\main\\res\\layout\\registration.xml"
+    },
+    {
         "merged": "D:\\AndroidStudioProjects\\devAnd\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
         "source": "D:\\AndroidStudioProjects\\devAnd\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\layout\\abc_activity_chooser_view.xml"
     },
