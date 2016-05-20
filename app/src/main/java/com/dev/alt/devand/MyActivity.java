@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewDebug;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -39,6 +40,7 @@ public class MyActivity extends AppCompatActivity {
 
     // Creating JSON Parser object
     JSONParser jParser = new JSONParser();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,31 +66,6 @@ public class MyActivity extends AppCompatActivity {
         });
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_my, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
-    /**
-     * Background Async Task to Load all product by making HTTP Request
-     * */
     class ConnectUser extends AsyncTask<String, String, String> {
         private String login;
         private String password;
@@ -130,12 +107,6 @@ public class MyActivity extends AppCompatActivity {
                     i.putExtra("mail", json.getString(TAG_MAIL));
                     startActivity(i);
                 } else {
-                    // no products found
-                    // Launch Add New product Activity
-                    /*Intent i = new Intent(getApplicationContext(), NewProductActivity.class);
-                    // Closing all previous activities
-                    i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    startActivity(i);*/
                 }
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -148,7 +119,7 @@ public class MyActivity extends AppCompatActivity {
          * After completing background task Dismiss the progress dialog
          * **/
         protected void onPostExecute(String file_url) {
-            // dismiss the dialog after getting all products
+            // dismiss the dialog after response
             pDialog.dismiss();
             // updating UI from Background Thread
             runOnUiThread(new Runnable() {
