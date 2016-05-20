@@ -10,7 +10,7 @@
         android:theme="@style/AppTheme">
         <!-- View -->
         <activity
-            android:name=".MyActivity"
+            android:name=".Connection"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Connected" />
+        <activity android:name=".Menu" />
         <activity android:name=".Registration" />
 
         <!-- bdd -->

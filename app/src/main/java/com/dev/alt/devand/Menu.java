@@ -6,10 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-/**
- * Created by Hachiman on 27/04/2016.
- */
-public class Connected extends Activity {
+public class Menu extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +17,7 @@ public class Connected extends Activity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent logAction = new Intent(Connected.this, MyActivity.class);
+                Intent logAction = new Intent(Menu.this, Connection.class);
                 startActivity(logAction);
             }
         });

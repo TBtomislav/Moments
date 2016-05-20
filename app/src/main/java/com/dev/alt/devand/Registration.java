@@ -5,11 +5,9 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
@@ -48,7 +46,7 @@ public class Registration extends Activity {
         canc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent logAction = new Intent(Registration.this, MyActivity.class);
+                Intent logAction = new Intent(Registration.this, Connection.class);
                 startActivity(logAction);
             }
         });
@@ -111,7 +109,7 @@ public class Registration extends Activity {
                 int success = json.getInt(TAG_SUCCESS);
 
                 if (success == 1) {
-                    Intent i = new Intent(getApplicationContext(), Connected.class);
+                    Intent i = new Intent(getApplicationContext(), Menu.class);
                     i.putExtra("mail", json.getString(TAG_MAIL));
                     startActivity(i);
                 } else {

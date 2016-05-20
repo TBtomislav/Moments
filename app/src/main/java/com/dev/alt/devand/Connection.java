@@ -26,7 +26,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MyActivity extends AppCompatActivity {
+public class Connection extends AppCompatActivity {
 
     // Progress Dialog
     private ProgressDialog pDialog;
@@ -60,7 +60,7 @@ public class MyActivity extends AppCompatActivity {
         registration.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MyActivity.this, Registration.class);
+                Intent i = new Intent(Connection.this, Registration.class);
                 startActivity(i);
             }
         });
@@ -81,7 +81,7 @@ public class MyActivity extends AppCompatActivity {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            pDialog = new ProgressDialog(MyActivity.this);
+            pDialog = new ProgressDialog(Connection.this);
             pDialog.setMessage("Loading... Please wait...");
             pDialog.setIndeterminate(false);
             pDialog.setCancelable(false);
@@ -103,7 +103,7 @@ public class MyActivity extends AppCompatActivity {
                 int success = json.getInt(TAG_SUCCESS);
 
                 if (success == 1) {
-                    Intent i = new Intent(getApplicationContext(), Connected.class);
+                    Intent i = new Intent(getApplicationContext(), Menu.class);
                     i.putExtra("mail", json.getString(TAG_MAIL));
                     startActivity(i);
                 } else {

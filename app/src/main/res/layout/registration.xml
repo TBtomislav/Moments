@@ -5,8 +5,6 @@
     android:layout_height="match_parent"
     android:focusableInTouchMode="true">
 
-
-
     <include layout="@layout/background" />
 
     <TextView
