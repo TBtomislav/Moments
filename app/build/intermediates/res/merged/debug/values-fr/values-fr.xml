@@ -29,5 +29,6 @@
     <string name="my_account">Mon compte</string>
     <string name="password">Mot de passe</string>
     <string name="register">Enregistrement</string>
+    <string name="show">Afficher</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">">999"</string>
 </resources>

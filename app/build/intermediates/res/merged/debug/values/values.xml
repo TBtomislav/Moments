@@ -291,6 +291,7 @@
     <string name="my_account">My account</string>
     <string name="password">Password</string>
     <string name="register">Register</string>
+    <string name="show">Show</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
