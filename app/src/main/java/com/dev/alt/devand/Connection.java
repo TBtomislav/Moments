@@ -1,18 +1,21 @@
 package com.dev.alt.devand;
 
 import android.app.ProgressDialog;
+import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewDebug;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.dev.alt.devand.helper.PersonEntity;
+import com.dev.alt.devand.helper.PersonRepository;
 
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
@@ -35,7 +38,10 @@ public class Connection extends AppCompatActivity {
     private static String url_connection = "http://alt.moments.free.fr/requests/identify_user.php";
 
     private static final String TAG_SUCCESS = "success";
+    private static final String TAG_MESSAGE = "MESSAGE";
+    private static final String TAG_LOGIN = "login";
     private static final String TAG_MAIL = "mail";
+    private static final String TAG_SOCIALKEY = "socialKey";
     private static final String SALAGE = "alt";
 
     // Creating JSON Parser object
@@ -69,7 +75,6 @@ public class Connection extends AppCompatActivity {
     class ConnectUser extends AsyncTask<String, String, String> {
         private String login;
         private String password;
-
         protected ConnectUser(String l, String p) {
             this.login = l;
             this.password = p;
@@ -103,10 +108,24 @@ public class Connection extends AppCompatActivity {
                 int success = json.getInt(TAG_SUCCESS);
 
                 if (success == 1) {
-                    Intent i = new Intent(getApplicationContext(), Menu.class);
-                    i.putExtra("mail", json.getString(TAG_MAIL));
+                    PersonEntity pe = new PersonEntity(login,
+                            json.getString(TAG_MAIL),
+                            json.getString(TAG_SOCIALKEY),
+                            1);
+
+                    PersonRepository pr = new PersonRepository(getApplicationContext());
+
+                    if(pr.existPerson(login)) {
+                        pr.updatePerson(pe);
+                    } else {
+                        pr.addPerson(pe);
+                    }
+
+                    Intent i = new Intent(getApplicationContext(), MainMenu.class);
+                    i.putExtra("login", login);
                     startActivity(i);
                 } else {
+                    //TODO ajouter des messages d'erreur suivant le TAG_MESSAGE
                 }
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -122,10 +141,10 @@ public class Connection extends AppCompatActivity {
             // dismiss the dialog after response
             pDialog.dismiss();
             // updating UI from Background Thread
-            runOnUiThread(new Runnable() {
-                public void run() {
-                }
-            });
+            //runOnUiThread(new Runnable() {
+            //    public void run() {
+            //   }
+            //});
         }
 
         public String get_SHA_512_SecurePassword(String passwordToHash){

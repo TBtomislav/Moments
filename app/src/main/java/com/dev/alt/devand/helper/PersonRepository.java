@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 public class PersonRepository extends SQLiteOpenHelper {
 
@@ -42,6 +43,8 @@ public class PersonRepository extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_PERSON);
+
+        db.execSQL(CREATE_TABLE_PERSON);
     }
 
     /**
@@ -49,6 +52,9 @@ public class PersonRepository extends SQLiteOpenHelper {
      */
     // Adding new Person
     public void addPerson(PersonEntity person) {
+        Log.d("add person", "ajout person");
+        Log.d("add person", person.getLogin());
+
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
@@ -64,22 +70,48 @@ public class PersonRepository extends SQLiteOpenHelper {
 
     // Getting single Person
     public PersonEntity getPerson(String login) {
+        Log.d("get person", "recherche person");
+        Log.d("get person", login);
         SQLiteDatabase db = this.getReadableDatabase();
 
         Cursor cursor = db.query(TABLE_PERSON, new String[] { KEY_LOGIN,
                         KEY_MAIL, KEY_SOCIALKEY, KEY_LOGGEDIN }, KEY_LOGIN + "=?",
                 new String[] { String.valueOf(login) }, null, null, null, null);
-        if (cursor != null)
+        if (cursor.getCount() != 0)
             cursor.moveToFirst();
+        else
+            return null;
 
         PersonEntity person = new PersonEntity(cursor.getString(0), cursor.getString(1),
-                cursor.getString(2), Boolean.parseBoolean(cursor.getString(3)));
+                cursor.getString(2), cursor.getInt(3));
 
+        cursor.close();
+        db.close(); // Closing database connection
         return person;
+    }
+
+    // Getting single Person
+    public boolean existPerson(String login) {
+        Log.d("exist person", "existe person");
+        Log.d("exist person", login);
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = db.query(TABLE_PERSON, new String[] { KEY_LOGIN }, KEY_LOGIN + "=?",
+                new String[] { String.valueOf(login) }, null, null, null, null);
+
+        if (cursor.getCount()==0) {
+            cursor.close();
+            return false;
+        } else {
+            cursor.close();
+            return true;
+        }
     }
 
     // Updating single person
     public int updatePerson(PersonEntity person) {
+        Log.d("update person", "maj person");
+        Log.d("update person", person.getLogin());
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();

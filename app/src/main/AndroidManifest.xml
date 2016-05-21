@@ -20,8 +20,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Menu" />
-        <activity android:name=".Registration" />
+        <activity android:name=".MainMenu"/>
+        <activity android:name=".Registration"/>
 
         <!-- bdd -->
     </application>

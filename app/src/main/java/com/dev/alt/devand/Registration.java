@@ -11,6 +11,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.dev.alt.devand.helper.PersonEntity;
+import com.dev.alt.devand.helper.PersonRepository;
+
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONException;
@@ -34,6 +37,8 @@ public class Registration extends Activity {
     private static final String TAG_MESSAGE = "message";
     private static final String TAG_MAIL = "mail";
     private static final String SALAGE = "alt";
+    private static final String TAG_LOGIN = "login";
+    private static final String TAG_SOCIALKEY = "socialKey";
 
     // Creating JSON Parser object
     JSONParser jParser = new JSONParser();
@@ -163,8 +168,21 @@ public class Registration extends Activity {
                 int success = json.getInt(TAG_SUCCESS);
 
                 if (success == 1) {
-                    Intent i = new Intent(getApplicationContext(), Menu.class);
-                    i.putExtra("mail", json.getString(TAG_MAIL));
+                    PersonEntity pe = new PersonEntity(login,
+                            json.getString(TAG_MAIL),
+                            json.getString(TAG_SOCIALKEY),
+                            1);
+
+                    PersonRepository pr = new PersonRepository(getApplicationContext());
+
+                    if(pr.existPerson(login)) {
+                        pr.updatePerson(pe);
+                    } else {
+                        pr.addPerson(pe);
+                    }
+
+                    Intent i = new Intent(getApplicationContext(), MainMenu.class);
+                    i.putExtra("login", login);
                     startActivity(i);
                 } else {
                 }

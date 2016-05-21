@@ -1,11 +1,13 @@
 package com.dev.alt.devand.helper;
 
+import android.util.Log;
+
 public class PersonEntity {
     //private variables
     private String _login;
     private String _mail;
     private String _socialKey;
-    private boolean _loggedIn;
+    private int _loggedIn;
 
     // Empty constructor
     public PersonEntity(){
@@ -18,7 +20,8 @@ public class PersonEntity {
     }
 
     // constructor
-    public PersonEntity(String login, String mail, String socialKey, boolean loggedIn){
+    public PersonEntity(String login, String mail, String socialKey, int loggedIn){
+        Log.d("create person", login);
         this._login = login;
         this._mail = mail;
         this._socialKey = socialKey;
@@ -56,12 +59,12 @@ public class PersonEntity {
     }
 
     // getting phone number
-    public boolean getLoggedIn(){
+    public int getLoggedIn(){
         return this._loggedIn;
     }
 
     // setting phone number
-    public void setLoggedIn(boolean loggedIn){
+    public void setLoggedIn(int loggedIn){
         this._loggedIn = loggedIn;
     }
 }
