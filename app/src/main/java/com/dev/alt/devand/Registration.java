@@ -5,6 +5,8 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.text.method.PasswordTransformationMethod;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -41,6 +43,58 @@ public class Registration extends Activity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.registration);
+
+        final EditText pass = (EditText) findViewById(R.id.password);
+        pass.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                final int DRAWABLE_LEFT = 0;
+                final int DRAWABLE_TOP = 1;
+                final int DRAWABLE_RIGHT = 2;
+                final int DRAWABLE_BOTTOM = 3;
+
+                if(event.getAction() == MotionEvent.ACTION_DOWN) {
+                    if(event.getRawX() >= (pass.getRight() - 10 - pass.getCompoundDrawables()[DRAWABLE_RIGHT].getBounds().width())) {
+                        pass.setTransformationMethod(null);
+
+                        return true;
+                    }
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    if(event.getRawX() >= (pass.getRight() - 10 - pass.getCompoundDrawables()[DRAWABLE_RIGHT].getBounds().width())) {
+                        pass.setTransformationMethod(new PasswordTransformationMethod());
+
+                        return true;
+                    }
+                }
+                return false;
+            }
+        });
+
+        final EditText Cpass = (EditText) findViewById(R.id.ConfirmPassword);
+        Cpass.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                final int DRAWABLE_LEFT = 0;
+                final int DRAWABLE_TOP = 1;
+                final int DRAWABLE_RIGHT = 2;
+                final int DRAWABLE_BOTTOM = 3;
+
+                if(event.getAction() == MotionEvent.ACTION_DOWN) {
+                    if(event.getRawX() >= (Cpass.getRight() - 10 - Cpass.getCompoundDrawables()[DRAWABLE_RIGHT].getBounds().width())) {
+                        Cpass.setTransformationMethod(null);
+
+                        return true;
+                    }
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    if(event.getRawX() >= (Cpass.getRight() - 10 - Cpass.getCompoundDrawables()[DRAWABLE_RIGHT].getBounds().width())) {
+                        Cpass.setTransformationMethod(new PasswordTransformationMethod());
+
+                        return true;
+                    }
+                }
+                return false;
+            }
+        });
 
         Button canc = (Button) findViewById(R.id.butCancel);
         canc.setOnClickListener(new View.OnClickListener() {

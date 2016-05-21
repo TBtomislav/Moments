@@ -558,8 +558,27 @@
                     "startLine": 31,
                     "startColumn": 4,
                     "startOffset": 2555,
+                    "endColumn": 41,
+                    "endOffset": 2592
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioProjects\\devAnd\\app\\src\\main\\res\\values-fr\\strings.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 561,
+                        "endColumn": 41,
+                        "endOffset": 598
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 32,
+                    "startColumn": 4,
+                    "startOffset": 2597,
                     "endColumn": 100,
-                    "endOffset": 2651
+                    "endOffset": 2693
                 },
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\devAnd\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\values-fr\\values-fr.xml",

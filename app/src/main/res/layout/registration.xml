@@ -61,7 +61,10 @@
         android:paddingRight="10dp"
         android:layout_below="@+id/textViewPassword"
         android:layout_alignLeft="@+id/textViewPassword"
-        android:layout_alignStart="@+id/textViewPassword" />
+        android:layout_alignStart="@+id/textViewPassword"
+        android:layout_alignRight="@+id/login"
+        android:layout_alignEnd="@+id/login"
+        android:drawableRight="@drawable/icone_oeil" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -90,7 +93,8 @@
         android:layout_alignLeft="@+id/textViewConfirmPassword"
         android:layout_alignStart="@+id/textViewConfirmPassword"
         android:paddingLeft="10dp"
-        android:paddingRight="10dp" />
+        android:paddingRight="10dp"
+        android:drawableRight="@drawable/icone_oeil" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -108,7 +112,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/mail"
         android:editable="false"
-        android:inputType="text"
+        android:inputType="textEmailAddress"
         android:minWidth="300dp"
         android:minHeight="40dp"
         android:hint="@string/mail"

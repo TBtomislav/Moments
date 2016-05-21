@@ -136,6 +136,10 @@
         "source": "D:\\AndroidStudioProjects\\devAnd\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_switch_thumb_material.xml"
     },
     {
+        "merged": "D:\\AndroidStudioProjects\\devAnd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icone_oeil.gif",
+        "source": "D:\\AndroidStudioProjects\\devAnd\\app\\src\\main\\res\\drawable\\icone_oeil.gif"
+    },
+    {
         "merged": "D:\\AndroidStudioProjects\\devAnd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
         "source": "D:\\AndroidStudioProjects\\devAnd\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_seekbar_thumb_material.xml"
     },

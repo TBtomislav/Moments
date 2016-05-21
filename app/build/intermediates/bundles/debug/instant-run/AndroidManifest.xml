@@ -21,7 +21,7 @@
 
         <!-- View -->
         <activity
-            android:name="com.dev.alt.devand.MyActivity"
+            android:name="com.dev.alt.devand.Connection"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
@@ -30,7 +30,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.dev.alt.devand.Connected" />
+        <activity android:name="com.dev.alt.devand.Menu" />
         <activity android:name="com.dev.alt.devand.Registration" />
 
         <!-- bdd -->

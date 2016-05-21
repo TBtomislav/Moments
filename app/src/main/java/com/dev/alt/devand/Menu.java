@@ -8,11 +8,24 @@ import android.widget.TextView;
 
 public class Menu extends Activity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        String mail = "";
 
-        setContentView(R.layout.connected);
+        setContentView(R.layout.menu);
+
+        Bundle extras = getIntent().getExtras();
+
+        if (extras != null) {
+
+            //---------Récupère informations------------
+            mail = extras.getString("mail");
+
+
+        }
+
         TextView login = (TextView) findViewById(R.id.disconnect);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
