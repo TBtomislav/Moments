@@ -14,52 +14,187 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:src="@drawable/moments2" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv_name"
-        android:text="name"
-        android:layout_above="@+id/img_user"
-        android:layout_alignRight="@+id/img_user"
-        android:layout_alignEnd="@+id/img_user"
-        android:textSize="25sp"
-        android:textColor="#FFFFFF" />
+        android:src="@drawable/moments2"/>
 
     <ImageView
         android:layout_width="75dip"
         android:layout_height="100dip"
         android:id="@+id/img_user"
         android:src="@android:drawable/sym_def_app_icon"
-        android:layout_alignBottom="@+id/imageView2"
-        android:layout_alignRight="@+id/tv_account"
-        android:layout_alignEnd="@+id/tv_account"
-        android:layout_marginBottom="38dp"
-        android:contentDescription="User's picture" />
+        android:contentDescription="User's picture"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_name"
+        android:text="name"
+        android:textSize="@dimen/text_mmenu"
+        android:textColor="#FFFFFF"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_toLeftOf="@id/img_user"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/my_account"
         android:id="@+id/tv_account"
-        android:textSize="25sp"
-        android:layout_marginRight="20dp"
-        android:layout_marginEnd="20dp"
+        android:textSize="@dimen/text_mmenu"
+        android:textColor="@color/textLink"
         android:layout_below="@+id/img_user"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:textColor="#FFFFFF"/>
+        android:layout_alignRight="@+id/img_user"
+        android:layout_alignEnd="@+id/img_user"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Deconnection"
         android:id="@+id/disconnect"
-        android:textSize="25sp"
+        android:textSize="@dimen/text_mmenu"
+        android:textColor="@color/textLink"
         android:layout_below="@+id/tv_account"
-        android:layout_alignRight="@+id/tv_account"
-        android:layout_alignEnd="@+id/tv_account"
-        android:textColor="#FFFFFF" />
+        android:layout_alignRight="@+id/img_user"
+        android:layout_alignEnd="@+id/img_user"
+        android:layout_marginTop="5dp" />
 
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:id="@+id/ll_infos"
+        android:layout_below="@+id/disconnect"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/padd_top">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
+
+            <ImageButton
+                android:layout_width="@dimen/image_mmenu"
+                android:layout_height="@dimen/image_mmenu"
+                android:id="@+id/ib_photos" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:id="@+id/tv_photos"
+                android:textSize="@dimen/text_mmenu"
+                android:textColor="@color/textLink" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
+
+            <ImageButton
+                android:layout_width="@dimen/image_mmenu"
+                android:layout_height="@dimen/image_mmenu"
+                android:id="@+id/ib_moments" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:id="@+id/tv_moments"
+                android:textSize="@dimen/text_mmenu"
+                android:textColor="@color/textLink" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
+
+            <ImageButton
+                android:layout_width="@dimen/image_mmenu"
+                android:layout_height="@dimen/image_mmenu"
+                android:id="@+id/ib_success" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:id="@+id/tv_success"
+                android:textSize="@dimen/text_mmenu"
+                android:textColor="@color/textLink" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
+
+            <ImageButton
+                android:layout_width="@dimen/image_mmenu"
+                android:layout_height="@dimen/image_mmenu"
+                android:id="@+id/ib_friend" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:id="@+id/tv_friend"
+                android:textSize="@dimen/text_mmenu"
+                android:textColor="@color/textLink" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageButton
+        android:layout_width="300dp"
+        android:layout_height="125dp"
+        android:background="@drawable/rounded_img_mmenu"
+        android:id="@+id/ib_start_moment"
+        android:layout_below="@+id/ll_infos"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:background="@drawable/rounded_tv_in_ib_mmenu"
+        android:layout_width="300dp"
+        android:layout_height="40sp"
+        android:text="Moment"
+        android:gravity="center"
+        android:id="@+id/tv_start_moment"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_alignBottom="@+id/ib_start_moment"
+        android:layout_alignLeft="@+id/ib_start_moment"
+        android:layout_alignStart="@+id/ib_start_moment"
+        android:textColor="@color/buttonGreen"  />
+
+    <ImageButton
+        android:layout_width="300dp"
+        android:layout_height="125dp"
+        android:background="@drawable/rounded_img_mmenu"
+        android:id="@+id/ib_start_free"
+        android:layout_below="@+id/ib_start_moment"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/padd_top" />
+
+    <TextView
+        android:background="@drawable/rounded_tv_in_ib_mmenu"
+        android:layout_width="300dp"
+        android:layout_height="40sp"
+        android:text="Free Way"
+        android:gravity="center"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:id="@+id/tv_start_free"
+        android:layout_alignBottom="@+id/ib_start_free"
+        android:layout_alignLeft="@+id/ib_start_free"
+        android:layout_alignStart="@+id/ib_start_free"
+        android:textColor="@color/buttonGreen" />
 </RelativeLayout>

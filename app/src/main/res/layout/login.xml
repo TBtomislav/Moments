@@ -16,7 +16,7 @@
         android:textSize="35sp"
         android:gravity="center"
         android:enabled="false"
-        android:textColor="#375D81"
+        android:textColor="@color/text"
         android:layout_below="@+id/imageView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -123,7 +123,7 @@
         android:text="@string/forgottenPassword"
         android:id="@+id/tv_forgottenPassword"
         android:autoLink="none"
-        android:textColor="@color/colorLink"
+        android:textColor="@color/text"
         android:textStyle="italic"
         android:layout_above="@+id/textView2"
         android:layout_toRightOf="@+id/imgBtn_tryLoginFb"
