@@ -8,9 +8,11 @@
     <string name="but_cancel">Annuler</string>
     <string name="login">Identifiant</string>
     <string name="mail">Mail</string>
-    <string name="tv_forgottenPassword">mot de passe oublié ?</string>
+    <string name="forgottenPassword">mot de passe oublié ?</string>
     <string name="signOut">Déconnexion</string>
-    <string name="signIn">Connexion</string>
     <string name="signUp">S\'inscrire</string>
     <string name="withForm">via Formulaire</string>
+    <string name="signIn">Connexion</string>
+    <string name="free_way">Mode libre</string>
+    <string name="moment">Moment</string>
 </resources>

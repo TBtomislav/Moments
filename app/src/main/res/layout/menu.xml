@@ -54,7 +54,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/Deconnection"
+        android:text="@string/signOut"
         android:id="@+id/disconnect"
         android:textSize="@dimen/text_mmenu"
         android:textColor="@color/textLink"
@@ -76,12 +76,16 @@
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            android:paddingRight="@dimen/padd_right_picto_mmenu">
 
             <ImageButton
                 android:layout_width="@dimen/image_mmenu"
                 android:layout_height="@dimen/image_mmenu"
-                android:id="@+id/ib_photos" />
+                android:id="@+id/ib_photos"
+                android:src="@drawable/i_photo"
+                android:scaleType="center"
+                android:background="#00FFFFFF"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -96,12 +100,16 @@
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            android:paddingRight="@dimen/padd_right_picto_mmenu">
 
             <ImageButton
                 android:layout_width="@dimen/image_mmenu"
                 android:layout_height="@dimen/image_mmenu"
-                android:id="@+id/ib_moments" />
+                android:id="@+id/ib_moments"
+                android:src="@drawable/i_promenade"
+                android:scaleType="center"
+                android:background="#00FFFFFF" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -116,12 +124,16 @@
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            android:paddingRight="@dimen/padd_right_picto_mmenu">
 
             <ImageButton
                 android:layout_width="@dimen/image_mmenu"
                 android:layout_height="@dimen/image_mmenu"
-                android:id="@+id/ib_success" />
+                android:id="@+id/ib_success"
+                android:src="@drawable/i_score"
+                android:scaleType="center"
+                android:background="#00FFFFFF" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -141,7 +153,10 @@
             <ImageButton
                 android:layout_width="@dimen/image_mmenu"
                 android:layout_height="@dimen/image_mmenu"
-                android:id="@+id/ib_friend" />
+                android:id="@+id/ib_friend"
+                android:src="@drawable/i_amis"
+                android:scaleType="center"
+                android:background="#00FFFFFF"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -155,20 +170,21 @@
 
     <ImageButton
         android:layout_width="300dp"
-        android:layout_height="125dp"
+        android:layout_height="130dp"
         android:background="@drawable/rounded_img_mmenu"
         android:id="@+id/ib_start_moment"
         android:layout_below="@+id/ll_infos"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/mode_promenade"
+        android:scaleType="fitCenter" />
 
     <TextView
-        android:background="@drawable/rounded_tv_in_ib_mmenu"
         android:layout_width="300dp"
-        android:layout_height="40sp"
-        android:text="Moment"
+        android:layout_height="32sp"
+        android:text="@string/moment"
         android:gravity="center"
         android:id="@+id/tv_start_moment"
-        android:textSize="25dp"
+        android:textSize="20dp"
         android:textStyle="bold"
         android:layout_alignBottom="@+id/ib_start_moment"
         android:layout_alignLeft="@+id/ib_start_moment"
@@ -177,20 +193,22 @@
 
     <ImageButton
         android:layout_width="300dp"
-        android:layout_height="125dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/rounded_img_mmenu"
+        android:src="@drawable/mode_libre"
         android:id="@+id/ib_start_free"
         android:layout_below="@+id/ib_start_moment"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/padd_top" />
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:scaleType="center"/>
 
     <TextView
-        android:background="@drawable/rounded_tv_in_ib_mmenu"
         android:layout_width="300dp"
-        android:layout_height="40sp"
-        android:text="Free Way"
+        android:layout_height="32sp"
+        android:text="@string/free_way"
         android:gravity="center"
-        android:textSize="25dp"
+        android:textSize="20dp"
         android:textStyle="bold"
         android:id="@+id/tv_start_free"
         android:layout_alignBottom="@+id/ib_start_free"

@@ -53,7 +53,7 @@ public class Connection extends AppCompatActivity {
         
         setContentView(R.layout.login);
 
-        Button login = (Button) findViewById(R.id.tryLogin);
+        Button login = (Button) findViewById(R.id.btn_tryLogin);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -62,7 +62,7 @@ public class Connection extends AppCompatActivity {
             }
         });
 
-        TextView registration = (TextView) findViewById(R.id.Registration);
+        TextView registration = (TextView) findViewById(R.id.btn_SignUpViaForm);
         registration.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

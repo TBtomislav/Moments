@@ -15,4 +15,6 @@
     <string name="signUp">Sign Up</string>
     <string name="withFacebook" translatable="false">via Facebook</string>
     <string name="withForm">via Form</string>
+    <string name="free_way">Free Way</string>
+    <string name="moment">Moment</string>
 </resources>
