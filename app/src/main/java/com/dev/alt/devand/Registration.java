@@ -49,7 +49,7 @@ public class Registration extends Activity {
 
         setContentView(R.layout.registration);
 
-        final EditText pass = (EditText) findViewById(R.id.password);
+        final EditText pass = (EditText) findViewById(R.id.et_password);
         pass.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -75,7 +75,7 @@ public class Registration extends Activity {
             }
         });
 
-        final EditText Cpass = (EditText) findViewById(R.id.ConfirmPassword);
+        final EditText Cpass = (EditText) findViewById(R.id.et_confirmPassword);
         Cpass.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -101,7 +101,7 @@ public class Registration extends Activity {
             }
         });
 
-        Button canc = (Button) findViewById(R.id.butCancel);
+        Button canc = (Button) findViewById(R.id.btn_cancel);
         canc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -111,14 +111,14 @@ public class Registration extends Activity {
         });
 
 
-        Button save = (Button) findViewById(R.id.tryRegister);
+        Button save = (Button) findViewById(R.id.btn_tryRegister);
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String l = ((EditText) findViewById(R.id.login)).getText().toString();
-                String p = ((EditText) findViewById(R.id.password)).getText().toString();
-                String cp = ((EditText) findViewById(R.id.ConfirmPassword)).getText().toString();
-                String m = ((EditText) findViewById(R.id.mail)).getText().toString();
+                String l = ((EditText) findViewById(R.id.et_login)).getText().toString();
+                String p = ((EditText) findViewById(R.id.et_password)).getText().toString();
+                String cp = ((EditText) findViewById(R.id.et_confirmPassword)).getText().toString();
+                String m = ((EditText) findViewById(R.id.et_mail)).getText().toString();
                 if(p.equals(cp)) {
                     SaveUser cu = new SaveUser(l,p,m);
                     cu.execute();

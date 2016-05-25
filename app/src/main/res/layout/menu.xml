@@ -55,7 +55,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/signOut"
-        android:id="@+id/disconnect"
+        android:id="@+id/tv_disconnect"
         android:textSize="@dimen/text_mmenu"
         android:textColor="@color/textLink"
         android:layout_below="@+id/tv_account"
@@ -68,7 +68,7 @@
         android:layout_width="wrap_content"
         android:layout_height="120dp"
         android:id="@+id/ll_infos"
-        android:layout_below="@+id/disconnect"
+        android:layout_below="@+id/tv_disconnect"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/padd_top">
 

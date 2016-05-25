@@ -53,14 +53,13 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="db3b738c-306a-4389-b5e1-0f16e394ff46" name="Default" comment="Réalisation de l'interface principale de MainMenu (avec image)">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/i_amis.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/i_photo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/i_promenade.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/i_score.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/mode_libre.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/mode_promenade.png" />
+    <list default="true" readonly="true" id="db3b738c-306a-4389-b5e1-0f16e394ff46" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/dev/alt/devand/MainMenu.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/dev/alt/devand/MainMenu.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/dev/alt/devand/Registration.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/dev/alt/devand/Registration.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/login.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/login.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/menu.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/menu.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/registration.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/registration.xml" />
     </list>
     <list id="9cc19f31-15b9-481f-8d30-ffa43f0c4c5e" name="New changelist" comment="" />
     <ignored path="devAnd.iws" />
@@ -88,68 +87,7 @@
     <favorites_list name="devAnd" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="login.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/login.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.09091">
-              <caret line="65" column="37" selection-start-line="65" selection-start-column="25" selection-end-line="65" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="menu.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/menu.xml">
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.423077">
-              <caret line="127" column="64" selection-start-line="127" selection-start-column="64" selection-end-line="127" selection-end-column="64" />
-              <folding>
-                <element signature="e#1292#1311#0" expanded="true" />
-                <element signature="e#1644#1664#0" expanded="true" />
-                <element signature="e#1727#1746#0" expanded="true" />
-                <element signature="e#2061#2078#0" expanded="true" />
-                <element signature="e#2141#2160#0" expanded="true" />
-                <element signature="e#2696#2713#0" expanded="true" />
-                <element signature="e#2959#2990#0" expanded="true" />
-                <element signature="e#3055#3075#0" expanded="true" />
-                <element signature="e#3114#3134#0" expanded="true" />
-                <element signature="e#3557#3576#0" expanded="true" />
-                <element signature="e#3900#3931#0" expanded="true" />
-                <element signature="e#3996#4016#0" expanded="true" />
-                <element signature="e#4055#4075#0" expanded="true" />
-                <element signature="e#4505#4524#0" expanded="true" />
-                <element signature="e#4848#4879#0" expanded="true" />
-                <element signature="e#4944#4964#0" expanded="true" />
-                <element signature="e#5003#5023#0" expanded="true" />
-                <element signature="e#5449#5468#0" expanded="true" />
-                <element signature="e#5823#5843#0" expanded="true" />
-                <element signature="e#5882#5902#0" expanded="true" />
-                <element signature="e#6324#6343#0" expanded="true" />
-                <element signature="e#6925#6941#0" expanded="true" />
-                <element signature="e#7873#7891#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dimens.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.230769">
-              <caret line="8" column="39" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -1787,27 +1725,27 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/dev/alt/devand/Connected.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/dev/alt/devand/Connexion.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/connected.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/registration.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/dev/alt/devand/helper/User.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/dev/alt/devand/helper/Person.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/dev/alt/devand/helper/SQLiteHandler.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/dev/alt/devand/helper/PersonEntity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/dev/alt/devand/Menu.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/dev/alt/devand/MainMenu.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/dev/alt/devand/helper/PersonRepository.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/dev/alt/devand/Registration.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/background_gradient.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/rounded_edit_text.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/rounded_tv_in_ib_mmenu.xml" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/login.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values-fr/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/rounded_img_mmenu.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/dev/alt/devand/Connection.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/dev/alt/devand/MainMenu.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/menu.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/login.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/registration.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/dev/alt/devand/Registration.java" />
       </list>
     </option>
   </component>
@@ -2077,28 +2015,6 @@
               <option name="myItemId" value="res" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dimens.xml" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResGroupNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="devAnd" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -2114,8 +2030,40 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="drawable" />
+              <option name="myItemId" value="layout" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="devAnd" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="devAnd" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="devand" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -2645,7 +2593,13 @@
       <option name="project" value="LOCAL" />
       <updated>1464190829102</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Upload des images du menu principal">
+      <created>1464194238100</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1464194238100</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -2659,7 +2613,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879046" sideWeight="0.49755502" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15765247" sideWeight="0.49266502" order="7" side_tool="false" content_ui="tabs" />
@@ -2676,7 +2630,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.502445" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17298289" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17298289" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -2722,7 +2676,8 @@
     <MESSAGE value="Intégration et utilisation de SQLite Person depuis Connection,Registration vers MainMenu" />
     <MESSAGE value="Réalisation de l'interface principale de MainMenu (sans image)" />
     <MESSAGE value="Réalisation de l'interface principale de MainMenu (avec image)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Réalisation de l'interface principale de MainMenu (avec image)" />
+    <MESSAGE value="Upload des images du menu principal" />
+    <option name="LAST_COMMIT_MESSAGE" value="Upload des images du menu principal" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2741,25 +2696,25 @@
             <element signature="e#1644#1664#0" expanded="true" />
             <element signature="e#1727#1746#0" expanded="true" />
             <element signature="e#2061#2078#0" expanded="true" />
-            <element signature="e#2141#2160#0" expanded="true" />
-            <element signature="e#2696#2713#0" expanded="true" />
-            <element signature="e#2959#2990#0" expanded="true" />
-            <element signature="e#3055#3075#0" expanded="true" />
-            <element signature="e#3114#3134#0" expanded="true" />
-            <element signature="e#3557#3576#0" expanded="true" />
-            <element signature="e#3900#3931#0" expanded="true" />
-            <element signature="e#3996#4016#0" expanded="true" />
-            <element signature="e#4055#4075#0" expanded="true" />
-            <element signature="e#4505#4524#0" expanded="true" />
-            <element signature="e#4848#4879#0" expanded="true" />
-            <element signature="e#4944#4964#0" expanded="true" />
-            <element signature="e#5003#5023#0" expanded="true" />
-            <element signature="e#5449#5468#0" expanded="true" />
-            <element signature="e#5823#5843#0" expanded="true" />
-            <element signature="e#5882#5902#0" expanded="true" />
-            <element signature="e#6324#6343#0" expanded="true" />
-            <element signature="e#6925#6941#0" expanded="true" />
-            <element signature="e#7873#7891#0" expanded="true" />
+            <element signature="e#2144#2163#0" expanded="true" />
+            <element signature="e#2702#2719#0" expanded="true" />
+            <element signature="e#2965#2996#0" expanded="true" />
+            <element signature="e#3061#3081#0" expanded="true" />
+            <element signature="e#3120#3140#0" expanded="true" />
+            <element signature="e#3563#3582#0" expanded="true" />
+            <element signature="e#3906#3937#0" expanded="true" />
+            <element signature="e#4002#4022#0" expanded="true" />
+            <element signature="e#4061#4081#0" expanded="true" />
+            <element signature="e#4511#4530#0" expanded="true" />
+            <element signature="e#4854#4885#0" expanded="true" />
+            <element signature="e#4950#4970#0" expanded="true" />
+            <element signature="e#5009#5029#0" expanded="true" />
+            <element signature="e#5455#5474#0" expanded="true" />
+            <element signature="e#5829#5849#0" expanded="true" />
+            <element signature="e#5888#5908#0" expanded="true" />
+            <element signature="e#6330#6349#0" expanded="true" />
+            <element signature="e#6931#6947#0" expanded="true" />
+            <element signature="e#7879#7897#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2920,13 +2875,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dev/alt/devand/JSONParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50535077">
-          <caret line="44" column="38" selection-start-line="44" selection-start-column="38" selection-end-line="44" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/com/dev/alt/devand/ApplicationTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2806604">
@@ -2945,6 +2893,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.39285713">
           <caret line="23" column="38" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2952,13 +2901,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.68421054">
           <caret line="83" column="8" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dev/alt/devand/Registration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.3233082">
-          <caret line="39" column="52" selection-start-line="39" selection-start-column="52" selection-end-line="39" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2993,17 +2938,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.20858896">
           <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/registration.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.67048347">
-          <caret line="65" column="44" selection-start-line="65" selection-start-column="44" selection-end-line="66" selection-end-column="52" />
           <folding />
         </state>
       </provider>
@@ -3081,32 +3015,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dev/alt/devand/MainMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/login.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.09091">
-          <caret line="65" column="37" selection-start-line="65" selection-start-column="25" selection-end-line="65" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dev/alt/devand/Connection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47727272">
-          <caret line="55" column="62" selection-start-line="55" selection-start-column="62" selection-end-line="55" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values-w820dp/dimens.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.08343558">
@@ -3115,46 +3023,111 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.230769">
-          <caret line="8" column="39" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/menu.xml">
-      <provider selected="true" editor-type-id="android-designer">
+      <provider editor-type-id="android-designer">
         <state />
       </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.423077">
-          <caret line="127" column="64" selection-start-line="127" selection-start-column="64" selection-end-line="127" selection-end-column="64" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.06743">
+          <caret line="81" column="12" selection-start-line="81" selection-start-column="12" selection-end-line="81" selection-end-column="12" />
           <folding>
             <element signature="e#1292#1311#0" expanded="true" />
             <element signature="e#1644#1664#0" expanded="true" />
             <element signature="e#1727#1746#0" expanded="true" />
             <element signature="e#2061#2078#0" expanded="true" />
-            <element signature="e#2141#2160#0" expanded="true" />
-            <element signature="e#2696#2713#0" expanded="true" />
-            <element signature="e#2959#2990#0" expanded="true" />
-            <element signature="e#3055#3075#0" expanded="true" />
-            <element signature="e#3114#3134#0" expanded="true" />
-            <element signature="e#3557#3576#0" expanded="true" />
-            <element signature="e#3900#3931#0" expanded="true" />
-            <element signature="e#3996#4016#0" expanded="true" />
-            <element signature="e#4055#4075#0" expanded="true" />
-            <element signature="e#4505#4524#0" expanded="true" />
-            <element signature="e#4848#4879#0" expanded="true" />
-            <element signature="e#4944#4964#0" expanded="true" />
-            <element signature="e#5003#5023#0" expanded="true" />
-            <element signature="e#5449#5468#0" expanded="true" />
-            <element signature="e#5823#5843#0" expanded="true" />
-            <element signature="e#5882#5902#0" expanded="true" />
-            <element signature="e#6324#6343#0" expanded="true" />
-            <element signature="e#6925#6941#0" expanded="true" />
-            <element signature="e#7873#7891#0" expanded="true" />
+            <element signature="e#2144#2163#0" expanded="true" />
+            <element signature="e#2702#2719#0" expanded="true" />
+            <element signature="e#2965#2996#0" expanded="true" />
+            <element signature="e#3061#3081#0" expanded="true" />
+            <element signature="e#3120#3140#0" expanded="true" />
+            <element signature="e#3563#3582#0" expanded="true" />
+            <element signature="e#3906#3937#0" expanded="true" />
+            <element signature="e#4002#4022#0" expanded="true" />
+            <element signature="e#4061#4081#0" expanded="true" />
+            <element signature="e#4511#4530#0" expanded="true" />
+            <element signature="e#4854#4885#0" expanded="true" />
+            <element signature="e#4950#4970#0" expanded="true" />
+            <element signature="e#5009#5029#0" expanded="true" />
+            <element signature="e#5455#5474#0" expanded="true" />
+            <element signature="e#5829#5849#0" expanded="true" />
+            <element signature="e#5888#5908#0" expanded="true" />
+            <element signature="e#6330#6349#0" expanded="true" />
+            <element signature="e#6931#6947#0" expanded="true" />
+            <element signature="e#7879#7897#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/registration.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.7900764">
+          <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+          <folding>
+            <element signature="e#533#552#0" expanded="true" />
+            <element signature="e#1032#1051#0" expanded="true" />
+            <element signature="e#1521#1540#0" expanded="true" />
+            <element signature="e#2086#2105#0" expanded="true" />
+            <element signature="e#2803#2822#0" expanded="true" />
+            <element signature="e#3384#3403#0" expanded="true" />
+            <element signature="e#4005#4024#0" expanded="true" />
+            <element signature="e#4596#4615#0" expanded="true" />
+            <element signature="e#5384#5403#0" expanded="true" />
+            <element signature="e#5817#5836#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/login.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.826972">
+          <caret line="154" column="49" selection-start-line="154" selection-start-column="49" selection-end-line="154" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14601228">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dev/alt/devand/Registration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34244946">
+          <caret line="40" column="60" selection-start-line="40" selection-start-column="60" selection-end-line="40" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dev/alt/devand/JSONParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.50535077">
+          <caret line="44" column="38" selection-start-line="44" selection-start-column="38" selection-end-line="44" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dev/alt/devand/Connection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47800237">
+          <caret line="55" column="62" selection-start-line="55" selection-start-column="62" selection-end-line="55" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dev/alt/devand/MainMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6765755">
+          <caret line="52" column="57" selection-start-line="52" selection-start-column="57" selection-end-line="52" selection-end-column="57" />
+          <folding />
         </state>
       </provider>
     </entry>

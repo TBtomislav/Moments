@@ -24,7 +24,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/login"
+        android:id="@+id/et_login"
         android:text="ate"
         android:editable="false"
         android:inputType="text"
@@ -42,7 +42,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/password"
+        android:id="@+id/et_password"
         android:text="ate"
         android:editable="false"
         android:inputType="textPassword"
@@ -52,9 +52,9 @@
         android:textSize="25sp"
         android:background="@drawable/rounded_edit_text"
         android:layout_marginTop="37dp"
-        android:layout_below="@+id/login"
-        android:layout_alignLeft="@+id/login"
-        android:layout_alignStart="@+id/login"
+        android:layout_below="@+id/et_login"
+        android:layout_alignLeft="@+id/et_login"
+        android:layout_alignStart="@+id/et_login"
         android:paddingLeft="10dp"
         android:paddingRight="10dp" />
 
@@ -65,9 +65,9 @@
         android:text="@string/but_ok"
         android:id="@+id/btn_tryLogin"
         android:background="@drawable/rounded_button"
-        android:layout_below="@+id/password"
-        android:layout_alignLeft="@+id/password"
-        android:layout_alignStart="@+id/password"
+        android:layout_below="@+id/et_password"
+        android:layout_alignLeft="@+id/et_password"
+        android:layout_alignStart="@+id/et_password"
         android:layout_marginTop="20dp" />
 
     <ImageView
@@ -151,7 +151,7 @@
         android:textAllCaps="false"
         android:id="@+id/btn_SignUpViaForm"
         android:layout_alignTop="@+id/btn_SignUpViaFb"
-        android:layout_alignRight="@+id/password"
-        android:layout_alignEnd="@+id/password" />
+        android:layout_alignRight="@+id/et_password"
+        android:layout_alignEnd="@+id/et_password" />
 
 </RelativeLayout>

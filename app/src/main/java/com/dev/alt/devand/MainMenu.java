@@ -50,7 +50,7 @@ public class MainMenu extends Activity {
         TextView name = (TextView) findViewById(R.id.tv_name);
         name.setText(pe.getLogin());
 
-        TextView login = (TextView) findViewById(R.id.disconnect);
+        TextView login = (TextView) findViewById(R.id.tv_disconnect);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
