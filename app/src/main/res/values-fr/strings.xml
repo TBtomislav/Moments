@@ -15,4 +15,5 @@
     <string name="signIn">Connexion</string>
     <string name="free_way">Mode libre</string>
     <string name="moment">Moment</string>
+    <string name="stop_mode">Arrêter Mode Libre</string>
 </resources>

@@ -31,6 +31,9 @@ import java.util.List;
 
 public class Connection extends AppCompatActivity {
 
+    private PersonEntity pe;
+    PersonRepository pr;
+
     // Progress Dialog
     private ProgressDialog pDialog;
 
@@ -50,14 +53,21 @@ public class Connection extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        
+
+        pr = new PersonRepository(getApplicationContext());
+        pe = null;
+
+        //TODO: récupérer la dernière personne connecté, et si elle a toujouts pe.getLoggedIn()==1 alors lancer directement le MainMenu avec lui.
+
+        Bundle extras = getIntent().getExtras();
+
         setContentView(R.layout.login);
 
         Button login = (Button) findViewById(R.id.btn_tryLogin);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ConnectUser cu = new ConnectUser(((EditText) findViewById(R.id.login)).getText().toString(), ((EditText) findViewById(R.id.password)).getText().toString());
+                ConnectUser cu = new ConnectUser(((EditText) findViewById(R.id.et_login)).getText().toString(), ((EditText) findViewById(R.id.et_password)).getText().toString());
                 cu.execute();
             }
         });
