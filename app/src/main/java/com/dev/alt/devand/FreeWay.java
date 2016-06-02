@@ -1,5 +1,6 @@
 package com.dev.alt.devand;
 
+import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.graphics.PixelFormat;
@@ -9,10 +10,13 @@ import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.dev.alt.devand.helper.PersonEntity;
 import com.dev.alt.devand.helper.PersonRepository;
@@ -40,13 +44,14 @@ public class FreeWay extends AppCompatActivity implements SurfaceHolder.Callback
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
-    private GoogleApiClient client;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_free_way);
-
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_ALLOW_LOCK_WHILE_SCREEN_ON);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED);
         pr = new PersonRepository(getApplicationContext());
         pe = null;
 
@@ -87,17 +92,12 @@ public class FreeWay extends AppCompatActivity implements SurfaceHolder.Callback
         servDaemon = new Intent(FreeWay.this, Daemon.class);
         startService(servDaemon);
 
+
         Log.d("freeway", "service lancé");
         Button login = (Button) findViewById(R.id.btn_stopFree);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //CameraEntity ce = new CameraEntity();
-
-                // Nous prenons une photo
-                if (camera != null) {
-                    SavePicture();
-                }
 
                 stopService(servDaemon);
                 Log.d("freeway", "service arrété");
@@ -106,9 +106,26 @@ public class FreeWay extends AppCompatActivity implements SurfaceHolder.Callback
                 startActivity(i);
             }
         });
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
+    }
+
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if ((keyCode == KeyEvent.KEYCODE_VOLUME_DOWN)){
+            Toast.makeText(getApplicationContext(), "touche appuyé",
+                    Toast.LENGTH_SHORT).show();
+            Log.d("toast", "titi et gros minet");
+            //CameraEntity ce = new CameraEntity();
+            new Thread(new Runnable() {
+                public void run() {
+                    // Nous prenons une photo
+                    if (camera != null) {
+                        SavePicture();
+                    }
+                }
+            }).start();
+        }
+        return true;
     }
 
     // méhode pour caméra
@@ -172,6 +189,7 @@ public class FreeWay extends AppCompatActivity implements SurfaceHolder.Callback
     public void onResume() {
         super.onResume();
         camera = Camera.open();
+        InitializeCamera();
     }
 
     // Mise en pause de l'application
@@ -234,42 +252,9 @@ public class FreeWay extends AppCompatActivity implements SurfaceHolder.Callback
         } catch (Exception e) {
             Log.d("FreeWay", "erreur en prenant la photo :" + e.getMessage());
         }
-
     }
 
-    @Override
-    public void onStart() {
-        super.onStart();
-
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client.connect();
-        Action viewAction = Action.newAction(
-                Action.TYPE_VIEW, // TODO: choose an action type.
-                "FreeWay Page", // TODO: Define a title for the content shown.
-                // TODO: If you have web page content that matches this app activity's content,
-                // make sure this auto-generated web page URL is correct.
-                // Otherwise, set the URL to null.
-                Uri.parse(null)
-        );
-        AppIndex.AppIndexApi.start(client, viewAction);
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        Action viewAction = Action.newAction(
-                Action.TYPE_VIEW, // TODO: choose an action type.
-                "FreeWay Page", // TODO: Define a title for the content shown.
-                // TODO: If you have web page content that matches this app activity's content,
-                // make sure this auto-generated web page URL is correct.
-                // Otherwise, set the URL to null.
-                Uri.parse(null)
-        );
-        AppIndex.AppIndexApi.end(client, viewAction);
-        client.disconnect();
+    public Camera getCamera() {
+        return this.camera;
     }
 }

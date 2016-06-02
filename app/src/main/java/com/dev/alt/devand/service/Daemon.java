@@ -1,11 +1,18 @@
 package com.dev.alt.devand.service;
 
+import android.app.IntentService;
 import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
 import android.util.Log;
+import android.view.KeyEvent;
+import android.widget.Toast;
 
-public class Daemon extends Service {
+public class Daemon extends IntentService {
+
+    public Daemon() {
+        super("Daemon Free");
+    }
 
     @Override
     public IBinder onBind(Intent arg0)
@@ -14,22 +21,7 @@ public class Daemon extends Service {
     }
 
     @Override
-    public void onCreate()
-    {
-        super.onCreate();
+    protected void onHandleIntent(Intent intent) {
         Log.d("service", "service opérationnelle");
-    }
-
-    @Override
-    public int onStartCommand(Intent intent, int flags, int startId)
-    {
-        return super.onStartCommand(intent, flags, startId);
-    }
-
-    @Override
-    public void onDestroy()
-    {
-        super.onDestroy();
-        Log.d("service", "service détruit");
     }
 }
