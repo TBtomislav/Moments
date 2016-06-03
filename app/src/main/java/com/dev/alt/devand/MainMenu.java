@@ -22,7 +22,8 @@ public class MainMenu extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu);
 
-        pr = new PersonRepository(getApplicationContext());
+        // Permets de bypass le login
+        /*pr = new PersonRepository(getApplicationContext());
         pe = null;
         Bundle extras = getIntent().getExtras();
 
@@ -53,14 +54,15 @@ public class MainMenu extends Activity {
         // Update the username
         TextView name = (TextView) findViewById(R.id.tv_name);
         name.setText(pe.getLogin());
+        */
 
         // Bind components
         TextView login = (TextView) findViewById(R.id.tv_disconnect);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pe.setLoggedIn(0);
-                pr.updatePerson(pe);
+                //pe.setLoggedIn(0);
+                //pr.updatePerson(pe);
 
                 Intent logAction = new Intent(MainMenu.this, Connection.class);
                 startActivity(logAction);

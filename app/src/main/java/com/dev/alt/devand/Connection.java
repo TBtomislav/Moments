@@ -103,12 +103,20 @@ public class Connection extends AppCompatActivity {
             pDialog.show();
         }
 
+
         protected String doInBackground(String... args) {
             // Building Parameters
             List<NameValuePair> params = new ArrayList<NameValuePair>();
             params.add(new BasicNameValuePair("login", login));
             params.add(new BasicNameValuePair("pass", get_SHA_512_SecurePassword(password)));
 
+            // Permets de bypass le login par internet
+            Intent in = new Intent(getApplicationContext(), MainMenu.class);
+            in.putExtra("login", "ate");
+            startActivity(in);
+            return null;
+
+            /*
             // getting JSON string from URL
             JSONObject json = jParser.makeHttpRequest(url_connection, "POST", params);
 
@@ -141,7 +149,7 @@ public class Connection extends AppCompatActivity {
                 e.printStackTrace();
             }
 
-            return null;
+            return null;*/
         }
 
         /**

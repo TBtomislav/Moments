@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.graphics.PixelFormat;
 import android.hardware.Camera;
 import android.net.Uri;
+import android.os.Handler;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,6 +22,7 @@ import android.widget.Toast;
 import com.dev.alt.devand.helper.PersonEntity;
 import com.dev.alt.devand.helper.PersonRepository;
 import com.dev.alt.devand.service.Daemon;
+import com.dev.alt.devand.service.VolumeContentObserver;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -50,8 +52,6 @@ public class FreeWay extends AppCompatActivity implements SurfaceHolder.Callback
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_free_way);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_ALLOW_LOCK_WHILE_SCREEN_ON);
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED);
         pr = new PersonRepository(getApplicationContext());
         pe = null;
 
@@ -87,7 +87,6 @@ public class FreeWay extends AppCompatActivity implements SurfaceHolder.Callback
         surfaceCamera = (SurfaceView) findViewById(R.id.surfaceViewCamera);
         InitializeCamera();
 
-
         // Daemon
         servDaemon = new Intent(FreeWay.this, Daemon.class);
         startService(servDaemon);
@@ -108,7 +107,7 @@ public class FreeWay extends AppCompatActivity implements SurfaceHolder.Callback
         });
     }
 
-
+/*
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if ((keyCode == KeyEvent.KEYCODE_VOLUME_DOWN)){
@@ -126,7 +125,7 @@ public class FreeWay extends AppCompatActivity implements SurfaceHolder.Callback
             }).start();
         }
         return true;
-    }
+    }*/
 
     // méhode pour caméra
     @Override
@@ -188,7 +187,12 @@ public class FreeWay extends AppCompatActivity implements SurfaceHolder.Callback
     @Override
     public void onResume() {
         super.onResume();
-        camera = Camera.open();
+        if (camera == null)
+            camera = Camera.open();
+        getWindow().setFormat(PixelFormat.TRANSLUCENT);
+        isPreview = false;
+        Log.d("camera", surfaceCamera.toString());
+        surfaceCamera = (SurfaceView) findViewById(R.id.surfaceViewCamera);
         InitializeCamera();
     }
 
@@ -196,11 +200,6 @@ public class FreeWay extends AppCompatActivity implements SurfaceHolder.Callback
     @Override
     public void onPause() {
         super.onPause();
-
-        if (camera != null) {
-            camera.release();
-            camera = null;
-        }
     }
 
     private void SavePicture() {
@@ -256,5 +255,18 @@ public class FreeWay extends AppCompatActivity implements SurfaceHolder.Callback
 
     public Camera getCamera() {
         return this.camera;
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+
+        if (camera != null) {
+            isPreview = false;
+            camera.stopPreview();
+            camera.release();
+            camera = null;
+        }
+        stopService(servDaemon);
     }
 }
