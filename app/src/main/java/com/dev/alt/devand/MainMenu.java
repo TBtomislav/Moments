@@ -85,7 +85,7 @@ public class MainMenu extends Activity {
             public void onClick(View v) {
 
                 Intent freeIntent = new Intent(MainMenu.this, FreeWay.class);
-                freeIntent.putExtra("login", pe.getLogin());
+                //freeIntent.putExtra("login", pe.getLogin());
                 startActivity(freeIntent);
             }
         });

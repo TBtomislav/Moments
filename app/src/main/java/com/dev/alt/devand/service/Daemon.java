@@ -1,28 +1,46 @@
 package com.dev.alt.devand.service;
 
-import android.app.IntentService;
 import android.app.Service;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
-import android.graphics.PixelFormat;
-import android.hardware.Camera;
-import android.os.Handler;
+import android.content.IntentFilter;
 import android.os.IBinder;
 import android.util.Log;
-import android.view.KeyEvent;
-import android.view.SurfaceView;
 import android.widget.Toast;
 
-import com.dev.alt.devand.R;
 
-import java.io.FileOutputStream;
+public class Daemon extends Service implements VolumeContentObserverCallback {
 
-public class Daemon extends IntentService {
+    IntentFilter intentFilter;
 
-    VolumeContentObserver vco;
+    private final BroadcastReceiver receiver = new BroadcastReceiver() {
 
-    public Daemon() {
-        super("Daemon Free");
-    }
+        boolean b = true;
+        String a ="";
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            int event = -1;
+            if ("android.media.VOLUME_CHANGED_ACTION".equals(intent.getAction())) {
+                event = (int) intent
+                        .getExtras().get("android.media.EXTRA_VOLUME_STREAM_TYPE");
+            }
+
+            if(event == -1) {
+                return;
+            } else {
+                if(b) {
+                    Log.e("broadcast", "I got volume key down event");
+                    a += "a";
+                    Toast.makeText(context, a, Toast.LENGTH_LONG).show();
+
+                }
+                b = !b;
+            }
+        }
+
+
+    };
 
     @Override
     public IBinder onBind(Intent arg0)
@@ -31,20 +49,62 @@ public class Daemon extends IntentService {
     }
 
     @Override
-    protected void onHandleIntent(Intent intent) {
+    public int  onStartCommand(Intent intent, int flags, int startId) {
 
-        Log.d("service", "service opérationnelle");
+        Log.e("service", "service opérationnelle");
 
-        vco = new VolumeContentObserver(this, Daemon.this, new Handler());
-        getApplicationContext().getContentResolver().registerContentObserver(android.provider.Settings.System.CONTENT_URI, true, vco );
+        intentFilter = new IntentFilter(Intent.ACTION_SCREEN_ON);
+        intentFilter.addAction(Intent.ACTION_SCREEN_OFF);
+        intentFilter.addAction("android.media.VOLUME_CHANGED_ACTION");
+        registerReceiver(new BroadcastReceiver() {
+
+            boolean b = true;
+            String a ="";
+
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                if (intent.getAction().equals(Intent.ACTION_SCREEN_OFF)) {
+                    Log.d("daemon", Intent.ACTION_SCREEN_OFF);
+                } else if (intent.getAction().equals(Intent.ACTION_SCREEN_ON)) {
+                    Log.d("daemon", Intent.ACTION_SCREEN_ON);
+                }
+
+                int event = -1;
+                if ("android.media.VOLUME_CHANGED_ACTION".equals(intent.getAction())) {
+                    event = (int) intent
+                            .getExtras().get("android.media.EXTRA_VOLUME_STREAM_TYPE");
+                }
+
+                if(event == -1) {
+                    return;
+                } else {
+                    if(b) {
+                        Log.e("broadcast", "I got volume key down event");
+                        a += "a";
+                        Toast.makeText(context, a, Toast.LENGTH_LONG).show();
+                    }
+                    b = !b;
+                }
+            }
+        }, intentFilter);
+
+        /*IntentFilter filter = new IntentFilter();
+        filter.addAction("android.media.VOLUME_CHANGED_ACTION");
+
+        registerReceiver(receiver, filter);*/
+
+        return Service.START_REDELIVER_INTENT;
     }
 
     @Override
     public void onDestroy() {
-        getApplicationContext().getContentResolver().unregisterContentObserver(vco);
+        super.onDestroy();
+        unregisterReceiver(receiver);
+        stopSelf();
+        //getApplicationContext().getContentResolver().unregisterContentObserver(vco);
     }
 
-    public void sayIt() {
+    public void update() {
         Log.d("vco", "Winter is coming");
     }
 }
